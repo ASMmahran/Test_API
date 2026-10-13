@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Test_API.Controllers.V1
 {
     [ApiController]
-    [ApiVersion(1.0)]
+    [ApiVersion("1.0")]
     [Route("api/v{version:apiVersion}/products")]
     public class ProductsController : ControllerBase
     {
@@ -13,7 +13,7 @@ namespace Test_API.Controllers.V1
         {
             var product = new
             {
-                id = 1,
+                id = id,
                 name = "Laptop",
                 price = 25000
             };
