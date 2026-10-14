@@ -16,7 +16,6 @@ namespace Test_API.Controllers
             _context = context;
         }
 
-        // GET: api/products?page=1&pageSize=10&search=phone
         [HttpGet]
         public async Task<IActionResult> GetProducts(
             int page = 1,
@@ -76,7 +75,6 @@ namespace Test_API.Controllers
             return Ok(product);
         }
 
-        // POST: api/products
         [HttpPost]
         public async Task<IActionResult> CreateProduct(CreateProductDto dto)
         {
@@ -93,7 +91,6 @@ namespace Test_API.Controllers
             return Ok(new { message = "Product created successfully" });
         }
 
-        // PUT: api/products/1
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateProduct(
             int id, UpdateProductDto dto)
@@ -123,7 +120,6 @@ namespace Test_API.Controllers
             return Ok(new { message = "Product updated successfully" });
         }
 
-        // DELETE: api/products/1
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteProduct(int id)
         {
